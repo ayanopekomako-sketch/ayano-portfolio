@@ -72,7 +72,7 @@
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.8rem;
       list-style: none;
     }
 
@@ -240,7 +240,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: none;
     }
 
     .about-text h3 {
@@ -256,6 +255,40 @@
       font-size: 0.9rem;
       line-height: 2.2;
       margin-bottom: 1rem;
+    }
+
+    .about-numbers {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(109, 83, 42, 0.15);
+    }
+
+    .about-number {
+      text-align: center;
+    }
+
+    .about-number .num {
+      font-family: var(--font-en);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--color-brown);
+      display: block;
+      letter-spacing: 0.05em;
+    }
+
+    .about-number .num small {
+      font-family: var(--font-jp);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .about-number .num-label {
+      font-size: 0.72rem;
+      color: var(--color-text);
+      letter-spacing: 0.05em;
     }
 
     /* ===== Works ===== */
@@ -317,10 +350,164 @@
     }
 
     .work-card ul li::before {
-      content: '—';
+      content: '\2014';
       position: absolute;
       left: 0;
       color: var(--color-brown);
+      opacity: 0.5;
+    }
+
+    /* ===== Visual ===== */
+    .visual {
+      background: var(--color-bg);
+      padding: 5rem 2rem 4rem;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .visual-card {
+      text-align: center;
+    }
+
+    .visual-card img {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .visual-card p {
+      font-family: var(--font-jp-serif);
+      font-size: 0.8rem;
+      line-height: 1.9;
+      color: var(--color-text);
+    }
+
+    /* ===== Portfolio ===== */
+    .portfolio {
+      background: var(--color-bg);
+    }
+
+    .portfolio-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .portfolio-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .portfolio-item.reverse {
+      direction: rtl;
+    }
+
+    .portfolio-item.reverse > * {
+      direction: ltr;
+    }
+
+    .portfolio-images {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .portfolio-images img {
+      width: calc(50% - 0.4rem);
+      border-radius: 4px;
+      display: block;
+    }
+
+    .portfolio-text {
+      padding: 1rem 0;
+    }
+
+    .portfolio-tag {
+      font-family: var(--font-en);
+      font-size: 0.7rem;
+      color: var(--color-brown);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .portfolio-text h3 {
+      font-family: var(--font-jp-serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--color-text-dark);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .portfolio-text .portfolio-subtitle {
+      font-size: 0.8rem;
+      color: var(--color-brown);
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+
+    .portfolio-text p {
+      font-size: 0.85rem;
+      line-height: 2;
+    }
+
+    .portfolio-text .portfolio-result {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(109, 83, 42, 0.12);
+      font-size: 0.8rem;
+      color: var(--color-brown);
+      font-weight: 400;
+    }
+
+    /* ===== Clients ===== */
+    .clients {
+      background: var(--color-bg-light);
+    }
+
+    .clients-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .client-tag {
+      font-family: var(--font-jp);
+      font-size: 0.82rem;
+      color: var(--color-text);
+      background: var(--color-white);
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      letter-spacing: 0.05em;
+      transition: transform 0.2s;
+    }
+
+    .client-tag:hover {
+      transform: translateY(-2px);
+    }
+
+    .client-tag .client-category {
+      font-size: 0.65rem;
+      color: var(--color-brown);
+      opacity: 0.6;
+      margin-left: 0.4rem;
+    }
+
+    .clients-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.75rem;
       opacity: 0.5;
     }
 
@@ -370,6 +557,14 @@
       top: -1.2rem;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    .voice-source {
+      font-size: 0.72rem;
+      color: var(--color-text);
+      opacity: 0.6;
+      margin-top: 1rem;
+      font-style: normal;
     }
 
     /* ===== Contact ===== */
@@ -496,8 +691,13 @@
       }
 
       .about-img {
-        max-width: 220px;
+        width: 220px;
+        height: 220px;
         margin: 0 auto;
+      }
+
+      .about-numbers {
+        justify-content: center;
       }
 
       .works-grid {
@@ -507,6 +707,17 @@
 
       .work-card {
         padding: 2rem 1.5rem;
+      }
+
+      .portfolio-item,
+      .portfolio-item.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 1.5rem;
+      }
+
+      .portfolio-item {
+        margin-bottom: 3rem;
       }
 
       .voice-list {
@@ -520,6 +731,25 @@
 
       .section-sublabel {
         margin-bottom: 2.5rem;
+      }
+
+      /* スマホではbrを無効にして自然な折り返しに */
+      .hero-subtitle br,
+      .hero-desc br,
+      .about-text br,
+      .visual-card p br,
+      .portfolio-text br {
+        display: none;
+      }
+
+      .visual-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        max-width: 320px;
+      }
+
+      .visual-card p {
+        font-size: 0.75rem;
       }
     }
 
@@ -535,6 +765,14 @@
       .nav-logo {
         font-size: 1.1rem;
       }
+
+      .about-numbers {
+        gap: 1.2rem;
+      }
+
+      .about-number .num {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
@@ -546,6 +784,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about" onclick="closeMenu()">About</a></li>
       <li><a href="#works" onclick="closeMenu()">Works</a></li>
+      <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
       <li><a href="#voice" onclick="closeMenu()">Voice</a></li>
       <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
@@ -560,10 +799,10 @@
   <section class="hero" id="top">
     <div class="hero-content fade-in">
       <h1 class="hero-title">Ayano Tomioka</h1>
-      <p class="hero-subtitle">ビジュアルとことばで世界観を伝える<br>花出身のブランドディレクター</p>
+      <p class="hero-subtitle">花とことばで世界観を表現する<br>ブランドディレクター</p>
       <p class="hero-desc">
-        ブランディングから企画・撮影・執筆・発信まで、<br>
-        あなたの「想い」をかたちにします。
+        日比谷花壇で20年。1万点以上の商品企画を経て、<br>
+        今はブランドの世界観を整えるお手伝いをしています。
       </p>
       <div class="hero-line"></div>
     </div>
@@ -572,7 +811,7 @@
   <!-- About -->
   <section class="about" id="about">
     <div class="container">
-      <p class="section-label fade-in">About Me</p>
+      <p class="section-label fade-in">About</p>
       <p class="section-sublabel fade-in">プロフィール</p>
       <div class="about-inner fade-in">
         <div class="about-img">
@@ -580,14 +819,30 @@
         </div>
         <div class="about-text">
           <h3>感性と構成力で、想いをかたちにする</h3>
+          <p style="font-family: var(--font-jp-serif); font-size: 0.95rem; color: var(--color-text-dark); margin-bottom: 1.2rem;">富岡綾乃</p>
           <p>
-            約25年にわたり、ブライダル装花や商品企画の現場で培った感性と構成力を活かし、
-            ブランドの世界観づくりをトータルでサポートしています。
+            日比谷花壇で20年。ブライダル装花からギフト商品企画、チームマネジメントまで、
+            花と向き合い続けてきました。
           </p>
           <p>
+            独立後は、その経験を活かしてブランドの世界観づくりをトータルでサポート。
             コンサルティング・撮影ディレクション・SNS運用・LINE構築まで、
-            「伝わる」をデザインするお手伝いをしています。
+            「伝わる」をデザインしています。
           </p>
+          <div class="about-numbers">
+            <div class="about-number">
+              <span class="num">26<small>年</small></span>
+              <span class="num-label">花業界の経験</span>
+            </div>
+            <div class="about-number">
+              <span class="num">1<small>万</small><small>点</small>+</span>
+              <span class="num-label">商品企画</span>
+            </div>
+            <div class="about-number">
+              <span class="num">2,000<small>組</small>+</span>
+              <span class="num-label">ブライダル装花</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -600,7 +855,6 @@
       <p class="section-sublabel fade-in">サービス内容</p>
       <div class="works-grid">
 
-        <!-- 1. コンサルティング -->
         <div class="work-card fade-in">
           <p class="work-number">01</p>
           <h3>コンサルティング</h3>
@@ -612,43 +866,145 @@
           </ul>
         </div>
 
-        <!-- 2. SNS伴走 -->
         <div class="work-card fade-in">
           <p class="work-number">02</p>
           <h3>SNS伴走</h3>
           <p>Instagramを中心としたSNS運用をトータルでサポートします。</p>
           <ul>
-            <li>複数アカウント運用（2,000投稿以上の実績）</li>
-            <li>ハッシュタグ選定・投稿スケジュール管理</li>
+            <li>プロフィール設計・投稿テーマ策定</li>
             <li>コンテンツ企画・撮影ディレクション</li>
+            <li>複数アカウント運用（2,000投稿以上の実績）</li>
           </ul>
         </div>
 
-        <!-- 3. 公式LINEコンサル -->
         <div class="work-card fade-in">
           <p class="work-number">03</p>
-          <h3>公式LINEコンサル</h3>
+          <h3>公式LINE構築</h3>
           <p>公式LINEの構築から運用まで、ファン化につながる仕組みをつくります。</p>
           <ul>
             <li>LINE公式アカウントの設計・構築</li>
-            <li>教育コンテンツ・配信設計</li>
             <li>ファン化・リピーター育成の仕組みづくり</li>
+            <li>マガジンライクに世界観を表現</li>
           </ul>
         </div>
 
-        <!-- 4. 商品企画/撮影ディレクション -->
         <div class="work-card fade-in">
           <p class="work-number">04</p>
           <h3>商品企画 / 撮影ディレクション</h3>
           <p>商品の魅力を最大限に引き出す企画・撮影をディレクションします。</p>
           <ul>
-            <li>前職での1万点以上の実績</li>
-            <li>コンセプト設計からスタイリングまで</li>
+            <li>コンセプト設計から商品企画まで</li>
             <li>EC・SNS向けビジュアル制作</li>
+            <li>商品撮影ディレクション・スタイリング</li>
+            <li>1万点以上の商品企画実績</li>
           </ul>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- Visual -->
+  <section class="visual">
+    <div class="container">
+      <p class="section-label fade-in">Visual Direction</p>
+      <p class="section-sublabel fade-in">ビジュアルで魅せる、世界観のディレクション</p>
+      <div class="visual-grid">
+        <div class="visual-card fade-in">
+          <img src="images/visual-1.jpg" alt="ブランドの戦略構築から商品企画まで">
+          <p>ブランドの戦略構築から<br>商品企画、プロモーションまで<br>一貫して担当します</p>
+        </div>
+        <div class="visual-card fade-in">
+          <img src="images/visual-2.jpg" alt="丁寧にヒアリングして世界観づくり">
+          <p>丁寧にヒアリングして<br>想いが届くような世界観づくりを<br>お手伝いします</p>
+        </div>
+        <div class="visual-card fade-in">
+          <img src="images/visual-3.jpg" alt="ディレクションやスタイリング">
+          <p>告知用ビジュアルのための<br>ディレクションやスタイリングを<br>行います</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <p class="section-label fade-in">Portfolio</p>
+      <p class="section-sublabel fade-in">実績紹介</p>
+
+      <!-- Case 1: プリザーブドフラワー -->
+      <div class="portfolio-item fade-in">
+        <div class="portfolio-images">
+          <img src="images/case-5.jpg" alt="ボタニカルキャンドル">
+          <img src="images/case-6.jpg" alt="キャンドル制作">
+        </div>
+        <div class="portfolio-text">
+          <p class="portfolio-tag">Writing &amp; Direction</p>
+          <h3>素材の魅力を伝える提案コラム</h3>
+          <p class="portfolio-subtitle">プリザーブドフラワー素材メーカー × 花ブランド</p>
+          <p>
+            プリザーブドフラワー素材の魅力を、花のプロに向けて発信するコラムを企画・執筆。
+            素材の特性を活かしたアレンジ提案で、フローリストの創作意欲を刺激するコンテンツに。
+          </p>
+          <p class="portfolio-result">当初1本の依頼から全8本のシリーズに拡大</p>
+        </div>
+      </div>
+
+      <!-- Case 2: 津軽びいどろ -->
+      <div class="portfolio-item reverse fade-in">
+        <div class="portfolio-images">
+          <img src="images/case-1.jpg" alt="津軽びいどろ × 花（暖色）">
+          <img src="images/case-2.jpg" alt="津軽びいどろ × 花（寒色）">
+        </div>
+        <div class="portfolio-text">
+          <p class="portfolio-tag">Visual Direction</p>
+          <h3>伝統工芸品と花の世界観</h3>
+          <p class="portfolio-subtitle">北洋硝子「津軽びいどろ」× 花ブランド</p>
+          <p>
+            色ガラスの美しさを引き出す花の提案とビジュアルディレクション。
+            伝統工芸品の持つ透明感と、花の持つ生命力を掛け合わせた世界観を構築。
+          </p>
+          <p class="portfolio-result">撮影ディレクション・スタイリング・コピーライティング</p>
+        </div>
+      </div>
+
+      <!-- Case 3: フレーバーティー -->
+      <div class="portfolio-item fade-in">
+        <div class="portfolio-images">
+          <img src="images/case-3.jpg" alt="フレーバーティー × 花（赤）">
+          <img src="images/case-4.jpg" alt="フレーバーティー × カモミール">
+        </div>
+        <div class="portfolio-text">
+          <p class="portfolio-tag">Content Planning</p>
+          <h3>フレーバーティーのあるひととき</h3>
+          <p class="portfolio-subtitle">食品輸入卸 × 花ブランド</p>
+          <p>
+            フレーバーティーと花を組み合わせた季節のライフスタイル提案。
+            商品の世界観に合わせた撮影・コピーで、暮らしのなかの物語を演出。
+          </p>
+          <p class="portfolio-result">季節ごとのビジュアル企画・撮影・コピー制作</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="clients" id="clients">
+    <div class="container">
+      <p class="section-label fade-in">Clients</p>
+      <p class="section-sublabel fade-in">お取引先</p>
+      <div class="clients-grid fade-in">
+        <span class="client-tag">青木園芸 <span class="client-category">花生産</span></span>
+        <span class="client-tag">アデリア <span class="client-category">食器</span></span>
+        <span class="client-tag">タキイ種苗 <span class="client-category">種苗</span></span>
+        <span class="client-tag">陶香堂 <span class="client-category">うつわ</span></span>
+        <span class="client-tag">nakato <span class="client-category">食品</span></span>
+        <span class="client-tag">北洋硝子 <span class="client-category">津軽びいどろ</span></span>
+        <span class="client-tag">モノ・インターナショナル <span class="client-category">プリザーブド素材</span></span>
+        <span class="client-tag">decora <span class="client-category">花屋</span></span>
+      </div>
+      <p class="clients-note fade-in">ほか、個人事業主・農家の方もサポートしています</p>
     </div>
   </section>
 
@@ -661,20 +1017,23 @@
         <div class="voice-card fade-in">
           <p class="voice-tag">Direction</p>
           <blockquote>
-            商品がこんなに魅力的になるとは思いませんでした。世界観がしっかり伝わるようになりました。
+            商品の魅力をこんな風に引き出してもらえるとは思いませんでした。世界観がしっかり伝わるようになりました。
           </blockquote>
+          <p class="voice-source">素材メーカー</p>
+        </div>
+        <div class="voice-card fade-in">
+          <p class="voice-tag">Writing</p>
+          <blockquote>
+            詩的な文章なのに、商品の魅力がちゃんと伝わる。信頼できる提案をしてくださいます。
+          </blockquote>
+          <p class="voice-source">食品メーカー</p>
         </div>
         <div class="voice-card fade-in">
           <p class="voice-tag">SNS</p>
           <blockquote>
-            Instagram投稿のサポートのおかげで、フォロワーとの関係が深まりました。
+            Instagram投稿のサポートのおかげで、フォロワーとの関係が深まり、指名での問い合わせが増えました。
           </blockquote>
-        </div>
-        <div class="voice-card fade-in">
-          <p class="voice-tag">Party</p>
-          <blockquote>
-            想像以上の空間で、ゲストからもたくさんの感動の声をいただきました。
-          </blockquote>
+          <p class="voice-source">花生産者</p>
         </div>
       </div>
     </div>
@@ -686,7 +1045,8 @@
       <p class="section-label fade-in">Contact</p>
       <p class="section-sublabel fade-in">お問い合わせ</p>
       <p class="contact-desc fade-in">
-        お仕事のご依頼・ご相談はお気軽にご連絡ください。
+        お仕事のご依頼・ご相談はお気軽にご連絡ください。<br>
+        2〜3営業日以内にお返事いたします。
       </p>
       <div class="contact-info fade-in">
         <div class="contact-item">
@@ -721,6 +1081,13 @@
       navLinks.classList.remove('open');
     }
 
+    // Close menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav')) {
+        closeMenu();
+      }
+    });
+
     // Navbar scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
@@ -734,7 +1101,7 @@
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
