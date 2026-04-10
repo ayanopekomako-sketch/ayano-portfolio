@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>富岡綾乃 - ブランドデザイン・デジタル支援</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    color: #3a3028;
+    background: #ebe3df;
+    line-height: 1.8;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 10mm 14mm 8mm;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Header ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5mm;
+    padding-bottom: 4mm;
+    border-bottom: 1px solid #ccbab1;
+  }
+
+  .header-left h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: #6d532a;
+    margin-bottom: 2px;
+  }
+
+  .header-left .name-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #8a7560;
+  }
+
+  .header-left .tagline {
+    font-size: 11px;
+    color: #8a7560;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  .header-right {
+    text-align: right;
+    font-size: 10px;
+    color: #8a7560;
+    line-height: 2;
+  }
+
+  .header-right a {
+    color: #6d532a;
+    text-decoration: none;
+  }
+
+  /* ── About ── */
+  .about {
+    background: #fff;
+    border-radius: 8px;
+    padding: 4mm 5mm;
+    margin-bottom: 4mm;
+  }
+
+  .about p {
+    font-size: 10.5px;
+    line-height: 1.8;
+    color: #4a3f35;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .about .highlights {
+    display: flex;
+    gap: 8mm;
+    margin-top: 3mm;
+    justify-content: center;
+  }
+
+  .highlight-item {
+    text-align: center;
+  }
+
+  .highlight-item .number {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #6d532a;
+    line-height: 1.2;
+  }
+
+  .highlight-item .unit {
+    font-size: 12px;
+    color: #6d532a;
+  }
+
+  .highlight-item .label {
+    font-size: 10px;
+    color: #8a7560;
+    margin-top: 1px;
+  }
+
+  /* ── Section Title ── */
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #6d532a;
+    letter-spacing: 2px;
+    margin-bottom: 4mm;
+  }
+
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    color: #8a7560;
+    margin-left: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* ── Services ── */
+  .services {
+    margin-bottom: 4mm;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3mm;
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 4mm 5mm;
+    position: relative;
+  }
+
+  .service-card .icon {
+    margin-bottom: 2mm;
+  }
+
+  .service-card .icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: #6d532a;
+    stroke-width: 1.2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .service-card h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #6d532a;
+    margin-bottom: 2mm;
+  }
+
+  .service-card p {
+    font-size: 10px;
+    color: #6a5f54;
+    line-height: 1.8;
+  }
+
+  .service-card .price {
+    font-size: 10px;
+    color: #8a7560;
+    margin-top: 2mm;
+    padding-top: 2mm;
+    border-top: 1px dashed #d9cec4;
+  }
+
+  /* ── For Associations ── */
+  .for-associations {
+    background: #fff;
+    border-radius: 8px;
+    padding: 4mm 5mm;
+    margin-bottom: 4mm;
+  }
+
+  .benefit-list {
+    list-style: none;
+    margin-top: 3mm;
+  }
+
+  .benefit-list li {
+    font-size: 10px;
+    color: #4a3f35;
+    padding: 1mm 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.8;
+  }
+
+  .benefit-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #6d532a;
+    font-weight: 600;
+  }
+
+  /* ── Contact ── */
+  .contact {
+    background: #6d532a;
+    border-radius: 8px;
+    padding: 4mm 6mm;
+    text-align: center;
+    color: #ebe3df;
+  }
+
+  .contact p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .contact .cta {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 2mm;
+    letter-spacing: 1px;
+  }
+
+  .contact a {
+    color: #e3d7c9;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    position: absolute;
+    bottom: 5mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9px;
+    color: #b8a99a;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <h1>AYANO TOMIOKA</h1>
+      <div class="name-jp">富岡 綾乃</div>
+      <div class="tagline">Brand Design &amp; Digital Support for Flower Industry</div>
+    </div>
+    <div class="header-right">
+      HP: ayano-direction.com<br>
+      Instagram: @aya_no_te<br>
+      MAIL: ayano.direction@gmail.com
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="about">
+    <p>
+      日比谷花壇に20年間勤務し、ウエディング装花やイベント装飾、1万点以上のギフト商品企画を手がけてまいりました。<br>
+      退職後は、花業界で培った美意識とデジタルスキルを掛け合わせ、<br>
+      LINE公式アカウント構築・SNS運用サポートなど、ブランドの世界観をデジタルに落とし込む支援をしております。
+    </p>
+    <div class="highlights">
+      <div class="highlight-item">
+        <div class="number">26<span class="unit">年</span></div>
+        <div class="label">花業界の経験</div>
+      </div>
+      <div class="highlight-item">
+        <div class="number">10,000<span class="unit">点+</span></div>
+        <div class="label">商品企画実績</div>
+      </div>
+      <div class="highlight-item">
+        <div class="number">2,000<span class="unit">組+</span></div>
+        <div class="label">ウェディング担当</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="services">
+    <div class="section-title">SERVICES<span class="section-title-jp">サービス内容</span></div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <h3>LINE公式アカウント構築</h3>
+        <p>あいさつメッセージ・リッチメニュー・ステップ配信・会員管理など、目的に合わせてまるごと構築します。</p>
+        <div class="price">200,000円〜 ／ 月額保守 20,000円〜</div>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h3>SNS運用サポート</h3>
+        <p>Instagram投稿の企画・コピーライティング・アカウント設計。世界観を統一し発信力を高めます。</p>
+        <div class="price">月額 30,000円〜</div>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <h3>アカウント設計・コンサル</h3>
+        <p>「何を・誰に・どう届けるか」を整理し、SNS・LINEの運用方針を設計。単発相談も可能です。</p>
+        <div class="price">50,000円〜</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- For Associations -->
+  <div class="for-associations">
+    <div class="section-title">FOR ASSOCIATIONS<span class="section-title-jp">協会・団体の皆様へ</span></div>
+    <p style="font-size: 11px; color: #4a3f35; margin-bottom: 2mm;">
+      LINE公式アカウントを活用することで、会員管理と情報配信を大幅に効率化できます。
+    </p>
+    <ul class="benefit-list">
+      <li>会員情報の登録・変更をLINE上で完結（紙やメールのやりとり不要）</li>
+      <li>会員種別・地域・関心に応じたセグメント配信で、必要な情報を必要な方だけに届ける</li>
+      <li>イベント・講座の告知から申込受付まで、LINEひとつでスムーズに</li>
+      <li>メール開封率15%前後 → LINE開封率80%以上。届く確率が圧倒的に違います</li>
+      <li>現在、ある協会様のLINE会員管理システムを構築進行中</li>
+    </ul>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact">
+    <p class="cta">まずは30分の無料相談から、お気軽にどうぞ。</p>
+    <p>富岡 綾乃｜ayano direction ／ HP: ayano-direction.com ／ MAIL: ayano.direction@gmail.com</p>
+  </div>
+
+  <div class="footer">© 2026 Ayano Tomioka — ayano direction</div>
+
+</div>
+</body>
+</html>
