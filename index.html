@@ -482,6 +482,52 @@
       max-width: 640px;
     }
 
+    .portfolio-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .portfolio-card {
+      background: var(--color-white);
+      border-radius: 8px;
+      padding: 2rem 2rem 1.8rem;
+    }
+
+    .portfolio-card .portfolio-tag {
+      margin-bottom: 0.6rem;
+    }
+
+    .portfolio-card h3 {
+      font-family: var(--font-jp-serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--color-text-dark);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+
+    .portfolio-card .portfolio-subtitle {
+      font-size: 0.8rem;
+      color: var(--color-brown);
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+
+    .portfolio-card p {
+      font-size: 0.82rem;
+      line-height: 2;
+      color: var(--color-text);
+    }
+
+    .portfolio-card .portfolio-scope {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+
     .portfolio-scope {
       display: flex;
       flex-wrap: wrap;
@@ -810,6 +856,11 @@
         margin-bottom: 3rem;
       }
 
+      .portfolio-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
       .voice-list {
         grid-template-columns: 1fr;
         gap: 1.2rem;
@@ -1081,9 +1132,9 @@
         </div>
       </div>
 
-      <!-- Case 4: decora LINE構築 -->
-      <div class="portfolio-item reverse text-only fade-in">
-        <div class="portfolio-text">
+      <!-- LINE構築実績 -->
+      <div class="portfolio-cards fade-in">
+        <div class="portfolio-card">
           <p class="portfolio-tag">LINE Official Account</p>
           <h3>世界観をそのままLINEに</h3>
           <p class="portfolio-subtitle">フラワーショップ decora 様</p>
@@ -1098,11 +1149,7 @@
             <span>操作マニュアル制作</span>
           </div>
         </div>
-      </div>
-
-      <!-- Case 5: 協会LINE構築 -->
-      <div class="portfolio-item text-only fade-in">
-        <div class="portfolio-text">
+        <div class="portfolio-card">
           <p class="portfolio-tag">LINE Official Account</p>
           <h3>協会の会員管理をLINEで一元化</h3>
           <p class="portfolio-subtitle">協会 様（会員数500名規模）</p>
